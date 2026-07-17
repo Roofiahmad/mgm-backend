@@ -38,7 +38,7 @@ public class IntranetDbConfig {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("com.roofiahmad.mgmbackend.model.intranet"); // <--- Ini memindai package entitas intranet
+        em.setPackagesToScan("com.roofiahmad.mgmbackend.model.intranet");
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

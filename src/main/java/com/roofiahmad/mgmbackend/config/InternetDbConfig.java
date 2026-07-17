@@ -41,7 +41,7 @@ public class InternetDbConfig {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("com.roofiahmad.mgmbackend.model.internet"); // <--- Ini memindai package entitas internet
+        em.setPackagesToScan("com.roofiahmad.mgmbackend.model.internet");
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);

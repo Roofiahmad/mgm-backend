@@ -13,12 +13,12 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // Mengizinkan semua path URL (termasuk /appeals dan /intranet/**)
-                        .allowedOrigins("*") // Mengizinkan semua domain asal (frontend). Ganti dengan URL frontend spesifik di production (misal: "http://localhost:3000")
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH") // Mengizinkan method HTTP apa saja
-                        .allowedHeaders("*") // Mengizinkan semua HTTP Headers
-                        .exposedHeaders("Authorization") // Mengekspos header tertentu jika kamu pakai JWT nantinya
-                        .maxAge(3600); // Durasi browser menyimpan respon pre-flight CORS (dalam detik)
+                registry.addMapping("/**")
+                        .allowedOrigins("*")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
+                        .allowedHeaders("*")
+                        .exposedHeaders("Authorization")
+                        .maxAge(3600);
             }
         };
     }
